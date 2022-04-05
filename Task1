@@ -1,0 +1,74 @@
+\documentclass[a4paper]{article}
+\usepackage[20pt]{extsizes} 
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{setspace,amsmath}
+\usepackage[left=20mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=10mm]{geometry}
+
+
+\begin{document}
+    
+\begin{center}
+    
+\textbf{Белорусский государственный университет}
+\break
+\break
+\textbf{Факультет прикладной маткматики и \\информатики}
+\break
+\break
+\break
+\break
+\break
+\break
+\break
+\break
+\textbf{Отчет по домашней работе}
+\break
+\break
+\textbf{Вычисление криволинейного интеграла по замкнутому контуру от комплексного переменного в зависимости от разных случаев задания контура}
+\break
+\break
+\break
+
+\end{center}
+
+\begin{flushright}
+\small\textbf{Выполнил студент 2 курса\\ 7 группы:\\ Король Никита Андреевич}
+\break
+\small\textbf{Преподаватель:\\Ушаков Александр Сергеевич}
+\break
+\break
+\break
+\break
+\end{flushright}
+
+\thispagestyle{empty}
+
+\begin{center}
+\small\textbf{Минск-2022 г.}    
+\end{center}
+
+
+
+\begin{flsuhleft}{}
+
+\footnotesize\textbf{Вычислить интеграл \[\oint_C \frac{e^zdz}{(z-i)^2(z-2)}dz \] в следующих случаях задания контура:}
+
+\begin{enumerate}
+    \item |\textit{z}-\textit{i}|=2;
+    \item |\textit{z}+2-\textit{i}|=3;
+\end{enumerate}
+
+\textbf{Решение:}
+\begin{enumerate}
+    \item В круг |\textit{z-i}|<2 попадает точка \textit{z=i}. Записываем функцию $\frac{\frac{e^z}{z+2}}{(z-i)^}$ и вычисляем интеграл $\oint_C \frac{e^2}{(z-i)^2(z+2)}dz=$ $2\pi i(\frac{e^z}{z+2})'|_i=$
+    $2\pi i\frac{e^z(z+1)}{(z+2)^2}|_i=$
+    $2\pi i\frac{e^i(i+1)}{(i+2)^2}.$
+    \item В круг |\textit{z}+2-\textit{i}|<3 входят обе точки $z_1=i, z_2=-2$. Запишем интеграл в виде: $\oint_C f(z)dz=$ $\oint_{C_1} f(z)dz + \oint_{C_2} f(z)dz$, где каждый из контуров $C_1$ и $C_2$ охватывает только одну из точек $z_1$ и $z_2$. В качестве контура $C_1$ возьмем окружность из пункта 1). $\oint_{C_1} f(z)dz=$ $2\pi i\frac{e^i(i+1)}{(i+2)^2}.$
+    В качестве контура $C_2$ возьмем окружность $|z+2+i|=2$. Тогда дробь примет вид $\frac{\frac{e^z}{z+2}}{(z-i)^}$. Вычислим интеграл $\oint_{C_1} f(z)dz=$ $2\pi i\frac{e^-2}{(i+2)^2}.$ И тогда исходный интеграл равен $\oint_C f(z)dz=$ $\oint_{C_1} f(z)dz + \oint_{C_2} f(z)dz=$ $\oint_{C_1} f(z)dz=$ $2\pi i\frac{e^i(i+1)}{(i+2)^2}+$ $2\pi i\frac{e^-2}{(i+2)^2}=$ $\frac{2\pi i}{(i+2)^2} (e^-2 + e^i (i+1))$
+\end{enumerate}
+
+\end{flsuhleft}
+\thispagestyle{empty}
+
+\end{document}
